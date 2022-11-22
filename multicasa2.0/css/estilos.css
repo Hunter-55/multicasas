@@ -1,0 +1,269 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	display: block;
+	background: linear-gradient(to bottom, #648caa, #cef1f1);
+}
+/* ----------------------------CSS Para la estructura de la pagina----------------------------------- */
+.g1 .g2 .g3 {
+	color:  white;
+}
+.contenedor{
+	width: 85%;
+	max-width: 100%;
+	min-width: 750px;
+	display: grid;
+	margin: auto auto;
+	grid-template-columns: 1fr 1fr 280px ;
+	/* grid-template-rows: repeat(4, 1fr);      Problema con el tamaño automatico de cada fraccion*/ 
+	background-color: #183046;
+	grid-row-gap: 5px;
+	grid-template-areas: "header 		header 			header"
+	"contenido 	contenido 		sidebar-1"
+	"contenido 	contenido 		sidebar-2"
+	"footer 		footer 			footer"
+
+}
+.contenedor .header{
+	/*grid-column: 1/span 3;*/
+	background-color: #10476b;
+	grid-area: header;
+}
+
+.contenedor .contenido {
+	/*grid-column: span 2;*/
+	/*grid-row: 2/span 2;*/
+
+	background-color: white;
+	grid-area: contenido;
+}
+
+.contenedor .sidebar-1 {
+	/*max-height: 370px;*/
+	/*grid-column: 3;*/
+	/*grid-row: 2;*/
+
+	background-color: #4596b7;
+	grid-area: sidebar-1;
+}
+.contenedor .sidebar-2 {
+	min-height: 550px;
+	background-color: #3d6492;
+	grid-area: sidebar-2;
+}
+
+.contenedor .footer {
+	/*grid-column: 1/span 3;*/
+	/*grid-row: 4;*/
+
+	background-color: #3d6492;
+	grid-area: footer;
+}
+
+
+
+@media screen  and (max-width: 970px){
+	.contenedor{
+		grid-template-areas: "header 		header 			header"
+		"contenido 	contenido 		contenido"
+		"sidebar-1 	sidebar-2 		sidebar-2"
+		"footer 		footer 			footer"
+	}
+}
+
+/*--------------HEADER--------------------------------------------------------------------------------*/
+.logo-empresa {
+	color: white;
+	margin-top: 15px;
+}
+.logo-empresa .logotipo{
+	float: left;
+	margin-left: 40px;
+	width: 550px;
+	text-align: center;
+}
+.logo-empresa .logo{
+	float: left;
+	margin-left: 40px;
+	height: 50px;
+	margin-bottom: 20px;
+}
+.logo-empresa .tel{
+	float: right;
+	padding-right: 10px;
+}
+.logo-empresa h1 h5{
+	margin-bottom: 0;
+}
+
+/*menu horizontal*/
+.menuHorizontal ul {
+	overflow: hidden;
+	list-style-type: none;
+	margin: 130px 0 0 3px;
+	padding: 0;
+	overflow: hidden;
+}
+.menuHorizontal .derecha {
+	background: linear-gradient(#1faad7, #2a6a92, #0076aa);
+	float: left;
+	border: 1px  solid #10476b;
+	width: 130px;
+}
+.menuHorizontal .derecha a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-decoration: none;
+}
+.menuHorizontal .derecha a:hover {
+	background-color: #111;
+}
+
+.menuHorizontal .izquierda a{
+	display: block;
+	float: right;
+	color: white;
+	padding-right: 20px;
+	text-decoration: none;
+}
+
+.menuHorizontal .incono-verde{
+	width: 10px; 
+	height: 12px;
+	float: left;
+	margin-top: 7px;
+	margin-right: 5px;
+}
+
+/*--------------CONTENIDO----------------------------------------------------------------------------*/
+.colash{
+	float: left;
+	padding: 80px 5px 30px 20px;
+	size: auto;
+}
+
+.contenido h1{
+	color: orange; 
+	text-align: center;
+	/*text-indent: 200px;*/
+	padding: 0;
+	margin: 0;
+}
+.contenido h5{
+	color: gray; 
+	text-align: center;
+	/*text-indent: 200px;*/
+	padding: 0;
+	margin: 0;
+}
+.contenido p{
+	text-align: justify;
+	padding: 50px;
+}
+
+
+/*--------------SIDEBAR-1-----------------------------------------------------------------------------*/
+.sidebar-1{
+	justify-self: stretch;
+}
+
+/*menu vertical*/
+.menuVertical ul {
+	list-style-type: none;
+	margin-top: 35px;
+	margin-bottom: 35px;
+	overflow: hidden;
+}
+.menuVertical li{
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.menuVertical li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	background-color: #377aa4;
+
+}
+.menuVertical li a:hover {
+	background-color: #111;
+}
+
+/*--------------SIDEBAR-2-----------------------------------------------------------------------------*/
+.logo-lupa{
+	text-align: center;
+	padding: 10px;
+	size: auto;
+}
+
+/*---------------FOOTER------------------------------------------------------------------------------*/
+.logo-footer{
+    float: left;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.menuFooter h5.fotterh5  {
+	color: orange;
+	padding-top: 14px;
+	float: left;
+}
+.menuFooter a{
+	padding-right: 0;
+	padding-left: 0;
+}
+.menuFooter ul{
+	display: block;
+	/*max-width: 880px;*/
+}
+
+.menuFooter ul.topnav {
+	list-style-type: none;
+	margin-top: 10px;
+	padding-left: 30px;
+	overflow: hidden;
+}
+.menuFooter ul.topnav li {
+	float: left;
+}
+.menuFooter ul.topnav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: underline;
+}
+
+.menuFooter ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+.menuFooter ul.topnav li a.active {background-color: #4CAF50;}
+
+.menuFooter ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 950px) {
+	.menuFooter ul.topnav li.right, 
+	.menuFooter ul.topnav li {float: none;}
+}
+
+/*---copyright----*/
+.copyright {
+	float: right;
+	text-align: right;
+	padding-right: 30px;
+}
+.copyright a{
+	color: orange;
+	margin: 0;
+}
+.copyright p{
+	color: white;
+	margin: 0;
+}
